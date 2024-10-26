@@ -1,4 +1,4 @@
-### **Terraform AWS repo**
+### **AWS TF repo**
 
 - triggered by gh webhook
 - _only tracks changes to **/main**_
