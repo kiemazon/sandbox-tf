@@ -6,4 +6,4 @@
 
 - build stage in pipeline uses gh repo as source
   - uses container image = hashicorp,tf:latest image
-  - runs tf _innit_>_plan_>_apply_
+  - uses buildspec.yml from repo (runs tf _innit_>_plan_>_apply_)
