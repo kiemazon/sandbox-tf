@@ -1,6 +1,6 @@
 ### **AWS TF repo**
 
-- triggered by gh webhook
+- pipeline is triggered by gh webhook
 - _only tracks changes to **/main**_
 - _only **closed PR** will initiate pipeline_
 - codebuild container image = hashicorp,tf:latest image
