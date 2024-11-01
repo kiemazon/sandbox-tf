@@ -17,7 +17,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-west-2"
+  region  = "eu-west-2"
 
   default_tags {
     tags = {
@@ -32,18 +32,5 @@ resource "aws_instance" "app_server" {
 
   tags = {
     Name = "sandboxTestInstance"
-  }
-}
-
-resource "aws_iam_user" "nice_account" {
-  name = "NiceAccount"
-}
-
-resource "aws_instance" "objective_complete" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.large"
-
-  tags = {
-    Name = "ObjectiveComplete"
   }
 }
