@@ -2,9 +2,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "[]## PRE DEPLOYMENT CHECKER \##""
-      - echo "[]configuring environment..."
-      - apt-get update && apt-get install -y jq
+      - |
+        echo "[]## PRE DEPLOYMENT CHECKER \##""
+      - |
+        echo "[]configuring environment..."
+      - |
+        apt-get update && apt-get install -y jq
       - |
         if [ $? -eq 0 ]; then
           echo "[]complete."
@@ -15,11 +18,16 @@ phases:
   build:
     commands:
       - echo
-      - echo -e "[]$startBuild Terraform pre-deployment checks..\n"
-      - echo "[]Running tf validate..."
-      - terraform init -backend=false
-      - terraform validate -json
-      - echo -e "[]tf validate complete.\n"
+      - |
+        echo -e "[]$startBuild Terraform pre-deployment checks..\n"
+      - |
+        echo "[]Running tf validate..."
+      - |
+        terraform init -backend=false
+      - |
+        terraform validate -json
+      - |
+        echo -e "[]tf validate complete.\n"
       - |
         validation_out=$(terraform validate -json)
         valid=$(echo $validation_out | jq -r .valid)
@@ -32,11 +40,14 @@ phases:
           echo "[env]Exiting preflight checks..."
           exit 1
         fi
-      - terraform init
-      - terraform plan -out=tfplan
+      - |
+        terraform init
+      - |
+        terraform plan -out=tfplan
   post_build:
     commands:
-      - echo "exiting preflight..."
+      - |
+        echo "exiting preflight..."
 artifacts:
   files:
     - tfplan
