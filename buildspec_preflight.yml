@@ -6,6 +6,7 @@ phases:
         echo "[]## PRE DEPLOYMENT CHECKER \##"
       - |
         echo "[]configuring environment..."
+      - apt-get --help
       - sudo apk update
       - sudo apk add jq
       - |
@@ -19,16 +20,11 @@ phases:
     commands:
       - |
         echo ""
-      - |
-        echo -e "[]$startBuild Terraform pre-deployment checks..\n"
-      - |
-        echo "[]Running tf validate..."
-      - |
-        terraform init -backend=false
-      - |
-        terraform validate -json
-      - |
-        echo -e "[]tf validate complete.\n"
+      - echo -e "[]$startBuild Terraform pre-deployment checks..\n"
+      - echo "[]Running tf validate..."
+      - terraform init -backend=false
+      - terraform validate -json
+      - echo -e "[]tf validate complete.\n"
       - |
         validation_out=$(terraform validate -json)
         valid=$(echo $validation_out | jq -r .valid)
