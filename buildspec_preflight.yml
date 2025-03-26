@@ -6,8 +6,7 @@ phases:
         echo "[]## PRE DEPLOYMENT CHECKER \##"
       - |
         echo "[]configuring environment..."
-      - |
-        pacman -S jq
+      - sudo pacman -S jq
       - |
         if [ $? -eq 0 ]; then
           echo "[]complete."
