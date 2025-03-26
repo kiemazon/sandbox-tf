@@ -6,7 +6,7 @@ phases:
         echo "[]## PRE DEPLOYMENT CHECKER \##"
       - |
         echo "[]configuring environment..."
-      - lsb_release -a
+      - cat /etc/os-release
       - sudo pacman -S jq
       - |
         if [ $? -eq 0 ]; then
