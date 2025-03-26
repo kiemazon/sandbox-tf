@@ -7,7 +7,7 @@ phases:
       - |
         echo "[]configuring environment..."
       - |
-        sudo pacman -S jq
+        pacman -S jq
       - |
         if [ $? -eq 0 ]; then
           echo "[]complete."
