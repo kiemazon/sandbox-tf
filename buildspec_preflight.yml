@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - |
-        echo "[]## PRE DEPLOYMENT CHECKER \##""
+        echo "[]## PRE DEPLOYMENT CHECKER \##"
       - |
         echo "[]configuring environment..."
       - |
