@@ -6,6 +6,7 @@ phases:
         echo "[]## PRE DEPLOYMENT CHECKER \##"
       - |
         echo "[]configuring environment..."
+      - which bash
       - apt-get --help
       - sudo apk update
       - sudo apk add jq
