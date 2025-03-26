@@ -17,7 +17,8 @@ phases:
           echo "[warning]:configuration failed!"
   build:
     commands:
-      - echo
+      - |
+        echo ""
       - |
         echo -e "[]$startBuild Terraform pre-deployment checks..\n"
       - |
