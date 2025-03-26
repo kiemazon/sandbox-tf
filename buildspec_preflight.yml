@@ -6,8 +6,8 @@ phases:
         echo "[]## PRE DEPLOYMENT CHECKER \##"
       - |
         echo "[]configuring environment..."
-      - cat /etc/os-release
-      - sudo pacman -S jq
+      - sudo apk update
+      - sudo apk add jq
       - |
         if [ $? -eq 0 ]; then
           echo "[]complete."
