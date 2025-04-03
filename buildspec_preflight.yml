@@ -9,8 +9,8 @@ phases:
       - whoami
       - echo $SHELL
       - which sh || sudo apk add bash
-      - sudo apk update
-      - sudo apk add jq
+      - apk update
+      - apk add jq
       - |
         if [ $? -eq 0 ]; then
           echo "[]complete."
