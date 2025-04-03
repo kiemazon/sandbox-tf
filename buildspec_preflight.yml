@@ -9,7 +9,6 @@ phases:
       - whoami
       - echo $SHELL
       - which sh || sudo apk add bash
-      - apt-get --help
       - sudo apk update
       - sudo apk add jq
       - |
