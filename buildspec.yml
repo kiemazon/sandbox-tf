@@ -12,6 +12,6 @@ phases:
   post_build:
     commands:
       - echo "Apply stage complete."
-artifacts:
-  files:
-    - tfplan
+# artifacts:
+#   files:
+#     - tfplan
