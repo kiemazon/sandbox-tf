@@ -8,7 +8,7 @@ phases:
         echo "[]configuring environment..."
       - whoami
       - echo $SHELL
-      - which bash
+      - which sh || sudo apk add bash
       - apt-get --help
       - sudo apk update
       - sudo apk add jq
