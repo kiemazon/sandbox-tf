@@ -6,8 +6,7 @@ phases:
         echo -e "## DEPLOYING TERRAFORM RESOURCES ##"
   build:
     commands:
-      - echo "Retrieving the plan from S3..."
-      - aws s3 cp s3://your-bucket-name/tfplan tfplan
+      - echo "initializing terraform..."
       - terraform init
       - terraform apply -auto-approve tfplan
   post_build:

@@ -48,6 +48,7 @@ phases:
     commands:
       - |
         echo "exiting preflight..."
-artifacts:
-  files:
-    - tfplan
+  artifacts:
+    files:
+     - tfplan
+     - buildspec.yml
