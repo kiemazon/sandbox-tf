@@ -25,7 +25,7 @@ phases:
         echo ""
       - echo -e "[]$startBuild Terraform pre-deployment checks..\n"
       - echo "[]Running tf validate..."
-      - terraform init -backend=false
+      - terraform init
       - terraform validate -json
       - echo -e "[]tf validate complete.\n"
       - |
