@@ -18,6 +18,7 @@ phases:
         else
           startBuild=Attempting
           echo "[warning]:configuration failed!"
+        fi
   build:
     commands:
       - |
